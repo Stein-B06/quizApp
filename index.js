@@ -20,30 +20,33 @@ const questions = [
     ],
   },
   {
-    question: "In the movie "A Nightmare on Elm Street," how does Freddy Krueger primarily attack his victims?",
+    question:
+      "In the movie <<A Nightmare on Elm Street>>, how does Freddy Krueger primarily attack his victims?",
     answers: [
       { text: "By haunting their dreams", correct: true },
       { text: " With a chainsaw", correct: false },
-      { text: "blur", correct: false },
-      { text: "answer", correct: false },
+      { text: "With a knife", correct: false },
+      { text: "By drowning them", correct: false },
     ],
   },
   {
-    question: "which bla bla?",
+    question:
+      "Which 1999 found footage horror film follows a group of student filmmakers as they investigate a local legend in the woods?",
     answers: [
-      { text: "bla", correct: true },
-      { text: "black", correct: false },
-      { text: "blur", correct: false },
-      { text: "answer", correct: false },
+      { text: "The Blair Witch Project", correct: true },
+      { text: "Cloverfield", correct: false },
+      { text: "Rec", correct: false },
+      { text: "The Descent", correct: false },
     ],
   },
   {
-    question: "which bla bla?",
+    question:
+      "What 1973 horror movie, based on a novel by William Peter Blatty, tells the story of a young girl possessed by a demonic entity?",
     answers: [
-      { text: "bla", correct: false },
-      { text: "black", correct: false },
-      { text: "blur", correct: false },
-      { text: "answer", correct: true },
+      { text: "The Omen", correct: false },
+      { text: " Rosemary's Baby", correct: false },
+      { text: "The Conjuring", correct: false },
+      { text: "The Exorcist", correct: true },
     ],
   },
 ];

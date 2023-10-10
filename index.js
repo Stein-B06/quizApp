@@ -10,19 +10,20 @@ const questions = [
     ],
   },
   {
-    question: "which bla bla?",
+    question:
+      " What 2017 horror film features a shape-shifting entity that often takes the form of a clown to prey on children?",
     answers: [
-      { text: "bla", correct: false },
-      { text: "black", correct: false },
-      { text: "blur", correct: true },
-      { text: "answer", correct: false },
+      { text: " Insidious", correct: false },
+      { text: "The Conjuring", correct: false },
+      { text: "It", correct: true },
+      { text: "Annabelle", correct: false },
     ],
   },
   {
-    question: "which bla bla?",
+    question: "In the movie "A Nightmare on Elm Street," how does Freddy Krueger primarily attack his victims?",
     answers: [
-      { text: "bla", correct: true },
-      { text: "black", correct: false },
+      { text: "By haunting their dreams", correct: true },
+      { text: " With a chainsaw", correct: false },
       { text: "blur", correct: false },
       { text: "answer", correct: false },
     ],
@@ -91,6 +92,7 @@ function selectAnswer(e) {
   const isCorrect = selecedBtn.dataset.correct === "true";
   if (isCorrect) {
     selecedBtn.classList.add("correct");
+    score++;
   } else {
     selecedBtn.classList.add("incorrect");
   }
@@ -102,5 +104,29 @@ function selectAnswer(e) {
   });
   nextButton.style.display = "block";
 }
+
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+}
+
+function handleNextButton() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    showScore();
+  }
+}
+
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+});
 
 startQuiz();

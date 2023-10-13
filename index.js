@@ -1,4 +1,4 @@
-//questions//
+//question
 const questions = [
   {
     question:
@@ -22,7 +22,7 @@ const questions = [
   },
   {
     question:
-      "In the movie <<A Nightmare on Elm Street>>, how does Freddy Krueger primarily attack his victims?",
+      "In the movie A Nightmare on Elm Street, how does Freddy Krueger primarily attack his victims?",
     answers: [
       { text: "By haunting their dreams", correct: true },
       { text: " With a chainsaw", correct: false },

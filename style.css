@@ -12,7 +12,7 @@ body {
 
 /*styling for the quiz-app*/
 .app {
-  background: #b61919;
+  background: #215a6a;
   width: 90%;
   max-width: 600px;
   margin: 100px auto 0;
@@ -23,7 +23,7 @@ body {
 /*styling for head-text*/
 .app h1 {
   font-weight: 25px;
-  color: #d5d82a;
+  color: #d9dce1;
   font-weight: 600;
   border-bottom: 1px solid #323;
   padding-bottom: 30px;
@@ -35,12 +35,12 @@ body {
 /*styling for the questions*/
 .quiz h2 {
   font-size: 18px;
-  color: #dae630;
+  color: #48acac;
   font-weight: 600;
 }
 
 .btn {
-  background: #e8e9ea;
+  background: #9fb7c7;
   color: #232;
   font-weight: 700;
   width: 100%;
@@ -53,7 +53,7 @@ body {
 }
 
 .btn:hover:not([disabled]) {
-  background: rgb(150, 133, 115);
+  background: rgb(156, 147, 189);
   color: #fff;
 }
 .btn:disabled {
@@ -61,7 +61,7 @@ body {
 }
 /*styling for the "next-button" after question is answered*/
 #next-btn {
-  background: #b4a81e;
+  background: #787dcd;
   color: #fff;
   font-weight: 500;
   width: 150px;
@@ -73,10 +73,10 @@ body {
   display: block;
 }
 
-/*styling for the background-color which appear when answer correct or wrong.
+/*styling for the background-color which appear when answer correct or wrong.*/
 .correct {
-  background: #9aeabd;
+  background: #0ac159;
 }
 .incorrect {
-  background: #e65a5a;
+  background: #bd0c0c;
 }

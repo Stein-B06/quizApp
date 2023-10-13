@@ -4,12 +4,15 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+/*for the background*/
 body {
-  background: #001e4d;
+  background-image: url(eerie.jpg);
+  background-size: cover;
 }
 
+/*styling for the quiz-app*/
 .app {
-  background: #fff;
+  background: #b61919;
   width: 90%;
   max-width: 600px;
   margin: 100px auto 0;
@@ -17,9 +20,10 @@ body {
   padding: 30px;
 }
 
+/*styling for head-text*/
 .app h1 {
   font-weight: 25px;
-  color: #001e5d;
+  color: #d5d82a;
   font-weight: 600;
   border-bottom: 1px solid #323;
   padding-bottom: 30px;
@@ -28,19 +32,19 @@ body {
 .quiz {
   padding: 20px 0;
 }
-
+/*styling for the questions*/
 .quiz h2 {
   font-size: 18px;
-  color: #001e6d;
+  color: #dae630;
   font-weight: 600;
 }
 
 .btn {
-  background: #fff;
+  background: #e8e9ea;
   color: #232;
-  font-weight: 500;
+  font-weight: 700;
   width: 100%;
-  border: 1px solid #212;
+  border: 2px solid #212;
   padding: 10px;
   margin: 10px 0;
   text-align: left;
@@ -49,15 +53,15 @@ body {
 }
 
 .btn:hover:not([disabled]) {
-  background: rgb(86, 107, 221);
+  background: rgb(150, 133, 115);
   color: #fff;
 }
 .btn:disabled {
   cursor: no-drop;
 }
-
+/*styling for the "next-button" after question is answered*/
 #next-btn {
-  background: #001e5d;
+  background: #b4a81e;
   color: #fff;
   font-weight: 500;
   width: 150px;
@@ -68,6 +72,8 @@ body {
   cursor: pointer;
   display: block;
 }
+
+/*styling for the background-color which appear when answer correct or wrong.
 .correct {
   background: #9aeabd;
 }

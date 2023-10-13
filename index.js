@@ -51,16 +51,6 @@ const questions = [
     ],
   },
 ];
-// Function to shuffle the questions randomly
-function shuffleQuestions(questions) {
-  for (let i = questions.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [questions[i], questions[j]] = [questions[j], questions[i]];
-  }
-}
-
-// Call this function to shuffle the questions
-shuffleQuestions(questions);
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");

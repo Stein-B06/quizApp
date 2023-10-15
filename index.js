@@ -1,4 +1,4 @@
-//question
+//Array with questions and answersobjects.
 const questions = [
   {
     question:
@@ -59,6 +59,7 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
+//Reset and restart quiz.
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -66,12 +67,14 @@ function startQuiz() {
   showQuestion();
 }
 
+//Generates and displays qurrent question.
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
+  //For each answer, generates a button with correct or incorrect value.
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
@@ -83,14 +86,7 @@ function showQuestion() {
     button.addEventListener("click", selectAnswer);
   });
 }
-
-function resetState() {
-  nextButton.style.display = "none";
-  while (answerButtons.firstChild) {
-    answerButtons.removeChild(answerButtons.firstChild);
-  }
-}
-
+//checks if answer is correct or incorrect, and styles the answer with 'correct' or 'inncorrect' class.
 function selectAnswer(e) {
   const selecedBtn = e.target;
   const isCorrect = selecedBtn.dataset.correct === "true";
@@ -100,22 +96,27 @@ function selectAnswer(e) {
   } else {
     selecedBtn.classList.add("incorrect");
   }
+
+  //Shows if the other answers is correct and disables buttons.
   Array.from(answerButtons.children).forEach((button) => {
     if (button.dataset.correct === "true") {
       button.classList.add("correct");
     }
     button.disabled = true;
   });
+
+  //shows next button.
   nextButton.style.display = "block";
 }
 
+//shows the score and changes the button-text to play again.
 function showScore() {
   resetState();
   questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
   nextButton.innerHTML = "Play Again";
   nextButton.style.display = "block";
 }
-
+//checks if more questions and shows score if last question.
 function handleNextButton() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
@@ -124,7 +125,7 @@ function handleNextButton() {
     showScore();
   }
 }
-
+//If last question, starts quiz from beginning.
 nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     handleNextButton();
@@ -133,4 +134,11 @@ nextButton.addEventListener("click", () => {
   }
 });
 
+//removes all the answer buttons.
+function resetState() {
+  nextButton.style.display = "none";
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
 startQuiz();

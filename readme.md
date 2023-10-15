@@ -6,7 +6,7 @@ The Quiz App is a web application designed to facilitate quizzes and tests. It a
 
 ## Features
 
-- **Multiple Choice Questions**: Create quizzes with multiple-choice questions for users to answer.
+- **Multiple Choice Questions**: A quiz with multiple-choice questions for users to answer.
 
 - **Immediate Feedback**: Users receive instant feedback on their answers, indicating whether they're correct or not. If answer is wrong, the correct answer will show.
 
